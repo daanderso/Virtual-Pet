@@ -9,7 +9,20 @@ public class VirtualPetApp {
 		VirtualPet dragon = new VirtualPet();
 		
 		
-		writeLine("Drago the Dragon");
+		writeLine("Drago the Dragon\n");
+		writeLine("       ^__^            ");
+		writeLine("       /oo\\            ");
+		writeLine("      | .. |           ");
+		writeLine(" ^^   (vvvv)  ^^      ");
+		writeLine(" \\\\  /    \\  //       ");
+		writeLine("  \\\\/      \\//        ");
+		writeLine("   /        \\         ");      
+		writeLine("   |         |      ^   ");
+		writeLine("  /           \\___/ |  "); 
+		writeLine(" (            )     | ");
+		writeLine(" \\-----------/     /  ");
+		writeLine("    //    \\\\____/    ");
+		writeLine("   W       W          ");
 		writeLine("Hunger: " + dragon.getHunger());
 		writeLine("Thirst: " + dragon.getThirst());
 		writeLine("Boredom:"  + dragon.getPlayfulness());
@@ -81,7 +94,21 @@ public class VirtualPetApp {
 				
 		dragon.tick();
 		
-		writeLine("After time moves forward...tick\n");
+		writeLine("After time moves forward...tick\n ");
+		writeLine("Drago the Dragon\n");
+		writeLine("       ^__^            ");
+		writeLine("       /oo\\            ");
+		writeLine("      | .. |           ");
+		writeLine(" ^^   (vvvv)  ^^      ");
+		writeLine(" \\\\  /    \\  //       ");
+		writeLine("  \\\\/      \\//        ");
+		writeLine("   /        \\         ");      
+		writeLine("   |         |      ^   ");
+		writeLine("  /           \\___/ |  "); 
+		writeLine(" (            )     | ");
+		writeLine(" \\-----------/     /  ");
+		writeLine("    //    \\\\____/    ");
+		writeLine("   W       W          ");
 		writeLine("Hunger: " + dragon.getHunger());
 		writeLine("Thirst: " + dragon.getThirst());
 		writeLine("Boredom:"  + dragon.getPlayfulness());

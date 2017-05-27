@@ -10,6 +10,7 @@ public class VirtualPet {
 	boolean isThirsty;
 	boolean isBored;
 	boolean death;
+	
 	//boolean dead = ((hunger >= 50) && (thirst >= 50));
 	
 	Random r = new Random();
