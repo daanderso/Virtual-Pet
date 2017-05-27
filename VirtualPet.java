@@ -5,14 +5,15 @@ public class VirtualPet {
 	int hunger = 25;
 	int thirst = 10;
 	int boredom = 30;
-	int tiredness = 25;	
+	int tired = 25;	
 	boolean isHungry;
 	boolean isThirsty;
 	boolean isBored;
-	boolean death;
+	boolean isTired;
+	boolean death; //boolean to start while loop if the pet is alive
+	              //the while loop condition is true
 	
-	//boolean dead = ((hunger >= 50) && (thirst >= 50));
-	
+// creating random object r for random number generator in tick method
 	Random r = new Random();
 		
 //Methods for a hungry pet		
@@ -47,6 +48,9 @@ public class VirtualPet {
 //Methods for a bored pet
 	void play (){
 		boredom = boredom - 10;
+		hunger = hunger + 3;
+		thirst = thirst + 5;
+		tired = tired + 5;
 	}
 
 	boolean isBored() {
@@ -57,6 +61,22 @@ public class VirtualPet {
 		return boredom;
 	}
 	
+//Methods for a tired pet
+	void nap (){
+		tired = tired - 10;
+	}
+	
+	boolean isTired() {
+		return tired >= 60;
+	}
+	
+	int getTiredness(){
+		return tired;
+	}
+	
+		
+	
+	
 // Done method
 	void quit (){
 		System.exit(0);
@@ -66,25 +86,13 @@ public class VirtualPet {
 	void tick() {
 		
 		//hunger = hunger + 5;
-		hunger = hunger + r.nextInt(10);
 		//thirst = thirst + 10;
+		hunger = hunger + r.nextInt(10);
 		thirst = thirst + r.nextInt(20);
 		boredom = boredom + r.nextInt(10);
+		tired = tired + r.nextInt(15);
 		
 	}
-	
-	//death method
-	
-//	boolean death () {
-//		
-//		return (hunger >= 50 && thirst >= 50);
-//
-//	}
-	
-	
-	
-	
-	
-	
+		
 	
 }//end class bracket
