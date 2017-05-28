@@ -2,23 +2,24 @@ import java.util.Random;
 
 public class VirtualPet {
 
-	int hunger = 25;
-	int thirst = 10;
-	int boredom = 30;
+	int hunger = 45;
+	int thirst = 20;
+	int boredom = 40;
 	int tired = 25;	
 	boolean isHungry;
 	boolean isThirsty;
 	boolean isBored;
 	boolean isTired;
-	boolean death; //boolean to start while loop if the pet is alive
-	              //the while loop condition is true
+	boolean death; //boolean to start while loop if the pet is alive 
+	              
 	
 // creating random object r for random number generator in tick method
 	Random r = new Random();
 		
-//Methods for a hungry pet		
+// Methods for a hungry pet		
 	void feed() {
 		hunger = hunger - 10;
+		thirst = thirst + 20;
 	}
 	
 	boolean isHungry() {
@@ -30,7 +31,8 @@ public class VirtualPet {
 	int getHunger(){
 		 return hunger;	
 	}
-	
+
+
 //Methods for a thirsty pet	
 	
 	void water (){
@@ -63,30 +65,23 @@ public class VirtualPet {
 	
 //Methods for a tired pet
 	void nap (){
-		tired = tired - 10;
+		tired = tired - 20;
+		hunger = hunger + 20;
 	}
 	
 	boolean isTired() {
-		return tired >= 60;
+		return tired >= 50;
 	}
 	
 	int getTiredness(){
 		return tired;
 	}
 	
-		
-	
-	
-// Done method
-	void quit (){
-		System.exit(0);
-	}
+
 	
 //Tick method
 	void tick() {
 		
-		//hunger = hunger + 5;
-		//thirst = thirst + 10;
 		hunger = hunger + r.nextInt(10);
 		thirst = thirst + r.nextInt(20);
 		boredom = boredom + r.nextInt(10);
