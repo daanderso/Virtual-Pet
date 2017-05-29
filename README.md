@@ -3,10 +3,11 @@
     
     Synopsis:
     ---------
-    Meet Drago the Dragon. Drago is a virtual pet. You may feed him, play with him, give him water and he sometimes needs rest.
-    Once Drago's stats reach 50 he will start to need more attention. Drago has a mind of his own sometimes so he may feed
-    himself, drink, entertain himself, or take a nap. There is a lot displayed on the console after time advances so you may need 
-    to scroll up to see all the details.
+    Meet Drago the Dragon. Drago is a virtual pet. You may feed him, play with him, give him water and he sometimes needs 
+    rest. Once Drago's needs reach 50 he will start to need more attention. Drago has a mind of his own sometimes so he may 
+    feed himself, drink, entertain himself, or take a nap. Lastly, be careful when any of Drago's needs get close to 100. 
+    If you wait too long to address them he can tragically pass away. There is a lot displayed on the console after time
+    advances so you may need to scroll up to see all the details.
     
     Instance variables
     ------------------
@@ -22,7 +23,7 @@
 	getHunger() - returns the hunger value
 	boolean isHungry() - boolean that returns true if the pet is hungry 
 	-----------------------------------
-	water() -  will decrease thirst
+	water() -  will decrease thirst and increase tiredness
 	isThirsty() - boolean that returns true if the pet is thirsty 
 	getThirst ()- returns the thirst value
 	------------------------------
