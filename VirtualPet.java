@@ -11,15 +11,15 @@ public class VirtualPet {
 	boolean isBored;
 	boolean isTired;
 	boolean death; //boolean to start while loop if the pet is alive 
-	              
-	
+
+
 // creating random object r for random number generator in tick method
 	Random r = new Random();
 		
 // Methods for a hungry pet		
 	void feed() {
 		hunger = hunger - 10;
-		thirst = thirst + 20;
+		thirst = thirst + 5;
 	}
 	
 	boolean isHungry() {
@@ -37,6 +37,7 @@ public class VirtualPet {
 	
 	void water (){
 		thirst = thirst - 10;
+		tired = tired + 7;
 	}
 	
 	boolean isThirsty() {
@@ -50,8 +51,8 @@ public class VirtualPet {
 //Methods for a bored pet
 	void play (){
 		boredom = boredom - 10;
-		hunger = hunger + 3;
-		thirst = thirst + 5;
+		hunger = hunger + 5;
+		thirst = thirst + 4;
 		tired = tired + 5;
 	}
 
@@ -66,7 +67,7 @@ public class VirtualPet {
 //Methods for a tired pet
 	void nap (){
 		tired = tired - 20;
-		hunger = hunger + 20;
+		hunger = hunger + 10;
 	}
 	
 	boolean isTired() {
@@ -83,7 +84,7 @@ public class VirtualPet {
 	void tick() {
 		
 		hunger = hunger + r.nextInt(10);
-		thirst = thirst + r.nextInt(20);
+		thirst = thirst + r.nextInt(10);
 		boredom = boredom + r.nextInt(10);
 		tired = tired + r.nextInt(15);
 		
